@@ -14,3 +14,6 @@ if __name__ == '__main__':
     airlines = read_csv("data/airlines.csv")
     airports = read_csv("data/airports.csv")
     flights = read_csv("data/flights.csv")
+
+    flights = flights.drop(['YEAR', 'FLIGHT_NUMBER', 'TAIL_NUMBER'], 1)
+    print(flights)
