@@ -15,5 +15,6 @@ if __name__ == '__main__':
     airports = read_csv("data/airports.csv")
     flights = read_csv("data/flights.csv")
 
-    flights = flights.drop(['YEAR', 'FLIGHT_NUMBER', 'TAIL_NUMBER'], 1)
+    flights = flights.drop(['YEAR', 'FLIGHT_NUMBER', 'TAIL_NUMBER', 'CANCELLATION_REASON', 'AIR_SYSTEM_DELAY', 'SECURITY_DELAY', 'AIRLINE_DELAY', 'LATE_AIRCRAFT_DELAY', 'WEATHER_DELAY'], 1)
+    flights.groupby("MONTH")
     print(flights)
